@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Focus styles for WCAG */
+:focus-visible {
+  outline: 3px solid theme('colors.accent.DEFAULT');
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Logical spacing helpers for RTL/LTR */
+.icon-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* Simple fade-in */
+.fade-in {
+  animation: fade .6s ease-out both;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
