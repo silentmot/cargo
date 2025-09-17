@@ -28,7 +28,7 @@
     "typescript": "^5.5.4"
   },
   "engines": {
-    "node": ">=v24.8.0",
+    "node": "22.x",
     "pnpm": ">=8.0.0"
   }
 }
